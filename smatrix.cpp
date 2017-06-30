@@ -193,7 +193,7 @@ double sm_access(sm *A,int i,int j){
 Fm *fmalloc(int n,vector<int> *indices){
     Fm *F=(Fm*)malloc(sizeof(Fm));
     F->n=n;
-    if(indices!=NULL)sort(indices->begin(),indices->end());
+    //if(indices!=NULL)sort(indices->begin(),indices->end());
     F->indices=indices;
     F->x=(double **)calloc(n,sizeof(double *));
     for(int i=0;i<n;i++)
@@ -252,7 +252,7 @@ Fm *UpdateF(Fm *F,double *l_b,vector<int> *Pind){
     
 
     for(int i=1;i<F->n;i++){
-        temp=0;
+        //temp=0;
         while(Pind->at(temp)!=Gind->at(i))temp++;
         U->indices->push_back(temp);
     }
